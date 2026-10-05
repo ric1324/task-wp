@@ -1,40 +1,48 @@
-<html>
-    <head>
-        <title>Form</title>
-        <style>
-            .p{
-                background: linear-gradient(#d97706,white); padding: 20px; color:white
-                color; black;
-                 font-family: 'Times New Roman', Times, serif;
-                 border-radius: 8px;
-                 padding: 10px 20px;
-                 border: 1px solid #ccc;
-            }
-            .p h1{
-                text-align: center;
-             font-family: 'Times New Roman', Times, serif;
-            }
-            .lengkung{
-                 border-radius: 8px;
-                 padding: 10px 20px;
-                 border: 1px solid #ccc;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-            
-        </style>
-        
-        
-    </head>
-    <body class="p">
-        <b><h1>Feedback page</h1></b>
-        <form action="/submit" method="post">
-            <label for="name">Name:</label>
-            <input type="text" class="lengkung" id="name" name="name"><br><br>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            color: #3b2a20;
+            background-color: #fdf6e3;
+        }
 
-            <label for="email">Email:</label>
-            <input type="email" class="lengkung" id="email" name="email"><br><br>
-            <label for="feedback">Feedback:</label><br>
-            <textarea name="feedback" rows="4" cols="50" placeholder="Enter your feedback here..." class="lengkung"></textarea><br>
-             <input type="submit" class="lengkung" value="Submit">
-        </form>
-</html>
+        /* Header: coklat */
+        header {
+            background-color: #5c3d2e;
+            color: #fdf6e3;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Tengah: gold */
+        main {
+            background-color: #d4a017;
+            padding: 40px 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #3b2a20;
+        }
