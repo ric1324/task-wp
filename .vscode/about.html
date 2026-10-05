@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Menandakan bahwa ini dokumen HTML5 -->
+<html lang="id">
+<head>
+  <!-- Supaya huruf/simbol tampil benar -->
+  <meta charset="UTF-8">
+  <!-- Supaya tampilan menyesuaikan lebar layar HP -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Judul yang muncul di tab browser -->
+  <title>Tentang Kami - NamaWebsite</title>
+  <!-- Menyambungkan file CSS ke halaman ini (harus satu folder) -->
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR =====
+       Menu navigasi di atas. Samain di semua halaman biar konsisten.
+       Class "active" menandai halaman yang sedang dibuka. -->
+  <header class="navbar">
+    <h1 class="logo">Resep Makanan J.M.K</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO =====
+       Bagian pembuka: judul besar dengan background kuning/emas -->
+  <section class="hero">
+    <h2>About us</h2>
+    <p>Get to know this website and the people behind its creation.</p>
+  </section>
+
+  <!-- ===== TUJUAN WEBSITE =====
+       Menjelaskan kenapa website ini dibuat (konteks: menu makanan) -->
+  <section class="section">
+    <h3>Our Goals</h3>
+    <p>
+     This website is created to provide a comprehensive menu of food items,
+      complete with images and prices, to enhance the dining experience for our users. <br>
+       We aim to offer clear information about each menu item, making it easy for customers to make <br>
+        informed choices. Our user-friendly design ensures that the website is accessible and convenient 
+        to use on both mobile devices and laptops.
+    </p>
+
+    <!-- Wadah kartu. Satu "card" = satu kotak fitur.
+         Mau tambah fitur? Copy satu blok card lalu ganti isinya. -->
+    <div class="cards">
+      <div class="card">
+        <h4> The Menu </h4>
+        <p>The comprehensive menu of food items, complete with images and prices.</p>
+      </div>
+      <div class="card">
+        <h4>Clear Information</h4>
+        <p>Clear and detailed information about each menu item to help customers make informed decisions.</p>
+      </div>
+      <div class="card">
+        <h4>User-Friendly</h4>
+        <p>Simple and comfortable design that is easy to use on both mobile devices and laptops.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIM DEVELOPER =====
+       Class "gray" dipakai untuk memberi background kuning pucat -->
+  <section class="section gray">
+    <h3>Developer Team</h3>
+    <p>This website is done by a team of Information Technology students at President University.</p>
+
+    <!-- Satu kartu "profile" per orang.
+         Ganti src foto, nama, dan peran. Atribut alt = teks pengganti kalau foto gagal muncul. -->
+    <div class="cards">
+      <div class="card profile">
+        <h4>Richardo</h4>
+      </div>
+      <div class="card profile">
+        <h4>Fazalika</h4>
+      </div>
+      <div class="card profile">
+        <h4>Alamsyah</h4>
+      </div>
+      <div class="card profile">
+        <h4>Asherenly</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER =====
+       Bagian paling bawah halaman. &copy; = simbol © -->
+  <footer class="footer">
+    <p> &copy; 2026 J.M.K Recipe. Made for a school project.</p>
+  </footer>
+
+</body>
+</html>
