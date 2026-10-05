@@ -2,13 +2,11 @@
     <head>
         <title>Form</title>
         <style>
-            .p{
+            .form{
                 background: linear-gradient(#d97706,white); padding: 20px; color:white
                 color; black;
                  font-family: 'Times New Roman', Times, serif;
-                 border-radius: 8px;
-                 padding: 10px 20px;
-                 border: 1px solid #ccc;
+                 
             }
             .p h1{
                 text-align: center;
@@ -19,14 +17,19 @@
                  padding: 10px 20px;
                  border: 1px solid #ccc;
             }
+            .P{
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                margin-top: 20px;
+            }
 
             
         </style>
         
         
     </head>
-    <body class="p">
-        <b><h1>Feedback page</h1></b>
+    <body class="form">
+        <b><h1 class="p h1">Feedback page</h1></b>
         <form action="/submit" method="post">
             <label for="name">Name:</label>
             <input type="text" class="lengkung" id="name" name="name"><br><br>
@@ -36,5 +39,9 @@
             <label for="feedback">Feedback:</label><br>
             <textarea name="feedback" rows="4" cols="50" placeholder="Enter your feedback here..." class="lengkung"></textarea><br>
              <input type="submit" class="lengkung" value="Submit">
+
+             <P class="P">
+                Thank you for your feedback; we will strive to make improvements based on the feedback provided. <br>
+             </P>
         </form>
 </html>
