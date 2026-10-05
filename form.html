@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            .p{
+                background: linear-gradient(#d97706,white); padding: 20px; color:white
+                color; black;
+                 font-family: 'Times New Roman', Times, serif;
+                 border-radius: 8px;
+                 padding: 10px 20px;
+                 border: 1px solid #ccc;
+            }
+            .p h1{
+                text-align: center;
+             font-family: 'Times New Roman', Times, serif;
+            }
+            .lengkung{
+                 border-radius: 8px;
+                 padding: 10px 20px;
+                 border: 1px solid #ccc;
+            }
+
+            
+        </style>
+        
+        
+    </head>
+    <body class="p">
+        <b><h1>Feedback page</h1></b>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" class="lengkung" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" class="lengkung" id="email" name="email"><br><br>
+            <label for="feedback">Feedback:</label><br>
+            <textarea name="feedback" rows="4" cols="50" placeholder="Enter your feedback here..." class="lengkung"></textarea><br>
+             <input type="submit" class="lengkung" value="Submit">
+        </form>
+</html>
