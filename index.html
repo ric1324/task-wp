@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Fried Rice Recipe</title>
+    <style>
+        /* Basic Reset & Global Box-Sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            color: #333333;
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        /* Card Wrapper with Shadow & Hover Effect */
+        .recipe-card {
+            max-width: 680px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Header Image Container */
+        .image-container {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Recipe Content Layout */
+        .recipe-content {
+            padding: 24px 28px;
+        }
+
+        .recipe-title {
+            color: #c62828;
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        /* Metadata Badges Container */
+        .recipe-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .meta-item {
+            background-color: #fff3e0;
+            color: #e65100;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Section Layout */
+        .recipe-section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #2c3e50;
+            border-bottom: 2px solid #ffe082;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        /* Interactive Checkbox Styling */
+        .ingredients-list {
+            list-style: none;
+        }
+
+        .ingredients-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ingredients-list input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #90a4ae;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            margin-right: 12px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .ingredients-list input[type="checkbox"]:checked {
+            background-color: #2e7d32;
+            border-color: #2e7d32;
+        }
+
+        .ingredients-list input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ingredients-list input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #888888;
+        }
+
+        /* Steps List Styling */
+        .steps-list {
+            padding-left: 20px;
+        }
+
+        .steps-list li {
+            margin-bottom: 12px;
+            color: #444444;
+        }
+
+        .step-label {
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+
+    <article class="recipe-card">
+        <!-- Recipe Header Image -->
+        <div class="image-container">
+            <img class="recipe-image" src="https://cdn-brilio-net.akamaized.net/news/2022/06/05/230770/1759794-1000xauto-resep-nasi-goreng-telur.jpg" alt="Village Fried Rice">
+        </div>
+
+        <div class="recipe-content">
+            <header>
+                <h1 class="recipe-title">Village Fried Rice (Nasi Goreng Kampung)</h1>
+
+                <!-- Metadata Badges -->
+                <div class="recipe-meta">
+                    <span class="meta-item"> only 15 - 20  Mins:3</span>
+                    <span class="meta-item"> very berry easy ˶˃ ᵕ ˂˶</span>
+                    <span class="meta-item"> 1-2 Servings ๑ᵔ⤙ᵔ๑</span>
+                </div>
+            </header>
+
+            <!-- Ingredients Section -->
+            <section class="recipe-section">
+                <h2 class="section-title">Ingredients</h2>
+                <ul class="ingredients-list">
+                    <li><input type="checkbox" id="ing1"><label for="ing1">300g cold white rice (leftover/day-old)</label></li>
+                    <li><input type="checkbox" id="ing2"><label for="ing2">2 eggs</label></li>
+                    <li><input type="checkbox" id="ing3"><label for="ing3">5 shallots</label></li>
+                    <li><input type="checkbox" id="ing4"><label for="ing4">3 cloves garlic</label></li>
+                    <li><input type="checkbox" id="ing5"><label for="ing5">5–10 bird's eye chilies (adjust to taste)</label></li>
+                    <li><input type="checkbox" id="ing6"><label for="ing6">1 tsp toasted shrimp paste (terasi)</label></li>
+                    <li><input type="checkbox" id="ing7"><label for="ing7">1/2 tsp salt</label></li>
+                    <li><input type="checkbox" id="ing8"><label for="ing8">1/2 tsp mushroom broth powder or seasoning</label></li>
+                    <li><input type="checkbox" id="ing9"><label for="ing9">1/4 tsp ground white pepper</label></li>
+                    <li><input type="checkbox" id="ing10"><label for="ing10">3–4 tbsp cooking oil</label></li>
+                </ul>
+            </section>
+
+            <!-- Cooking Steps Section -->
+            <section class="recipe-section">
+                <h2 class="section-title">Instructions</h2>
+                <ol class="steps-list">
+                    <li><strong class="step-label">Grind the spice paste:</strong> Grind garlic, shrimp paste, and salt until smooth. Add shallots and chilies, then coarsely grind them together.</li>
+                    <li><strong class="step-label">Sauté the spices:</strong> Heat oil in a wok or pan, then sauté the ground spice paste until fragrant and cooked through.</li>
+                    <li><strong class="step-label">Scramble the eggs:</strong> Push the spices to one side of the pan, crack in the eggs on the other side, and scramble until fully cooked.</li>
+                    <li><strong class="step-label">Add the rice:</strong> Add the cold rice, mix well with the spices and eggs over high heat until thoroughly combined and well-heated.</li>
+                    <li><strong class="step-label">Season:</strong> Add mushroom seasoning powder and white pepper. Adjust taste to preference, then stir-fry until slightly dry with a subtle smoky aroma.</li>
+                    <li><strong class="step-label">Serve:</strong> Transfer to a plate and serve hot with side garnishes such as cucumber slices or fried shallots.</li>
+                </ol>
+            </section>
+        </div>
+    </article>
+
+</body>
+</html>
