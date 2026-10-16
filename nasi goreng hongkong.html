@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hong Kong Fried Rice Recipe</title>
     <style>
+        :root {
+            --gold: #ffc107;
+            --gold-light: #fff3c4;
+            --gold-dark: #b8860b;
+            --brown: #3a2e00;
+        }
+
         /* Basic Reset & Global Box-Sizing */
         * {
             box-sizing: border-box;
@@ -14,8 +21,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f8;
-            color: #333333;
+            background-color: #fffdf5;
+            color: var(--brown);
             line-height: 1.6;
             padding: 30px 15px;
         }
@@ -26,14 +33,15 @@
             margin: 0 auto;
             background-color: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(184, 134, 11, 0.25);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .recipe-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 14px rgba(184, 134, 11, 0.3);
         }
 
         /* Header Image Container */
@@ -56,7 +64,7 @@
         }
 
         .recipe-title {
-            color: #c62828;
+            color: var(--brown);
             font-size: 26px;
             margin-bottom: 12px;
         }
@@ -64,17 +72,19 @@
         /* Metadata Badges Container */
         .recipe-meta {
             display: flex;
+            flex-wrap: wrap;
             gap: 12px;
             margin-bottom: 24px;
         }
 
         .meta-item {
-            background-color: #fff3e0;
-            color: #e65100;
+            background-color: var(--gold-light);
+            color: var(--brown);
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 13px;
             font-weight: 600;
+            border: 1px solid var(--gold);
         }
 
         /* Section Layout */
@@ -84,8 +94,8 @@
 
         .section-title {
             font-size: 18px;
-            color: #2c3e50;
-            border-bottom: 2px solid #ffe082;
+            color: var(--gold-dark);
+            border-bottom: 2px solid var(--gold);
             padding-bottom: 6px;
             margin-bottom: 14px;
         }
@@ -98,7 +108,7 @@
         .ingredients-list li {
             margin-bottom: 10px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .ingredients-list input[type="checkbox"] {
@@ -106,18 +116,30 @@
             -webkit-appearance: none;
             width: 18px;
             height: 18px;
-            border: 2px solid #90a4ae;
+            border: 2px solid var(--gold-dark);
             border-radius: 4px;
             outline: none;
             cursor: pointer;
             margin-right: 12px;
             position: relative;
+            flex: 0 0 18px;
             transition: all 0.2s ease;
         }
 
+        .ingredients-list input[type="checkbox"]:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        .ingredients-list label {
+            flex: 1;
+            min-width: 0;
+            cursor: pointer;
+        }
+
         .ingredients-list input[type="checkbox"]:checked {
-            background-color: #2e7d32;
-            border-color: #2e7d32;
+            background-color: var(--brown);
+            border-color: var(--brown);
         }
 
         .ingredients-list input[type="checkbox"]:checked::after {
@@ -132,7 +154,7 @@
 
         .ingredients-list input[type="checkbox"]:checked + label {
             text-decoration: line-through;
-            color: #888888;
+            color: var(--gold-dark);
         }
 
         /* Steps List Styling */
@@ -142,11 +164,43 @@
 
         .steps-list li {
             margin-bottom: 12px;
-            color: #444444;
+            color: var(--brown);
         }
 
         .step-label {
-            color: #c62828;
+            color: var(--gold-dark);
+        }
+
+        .ingredient-subtitle {
+            margin: 10px 0 8px;
+            color: var(--brown);
+            font-size: 15px;
+        }
+
+        .ingredient-subtitle + .ingredients-list + .ingredient-subtitle {
+            margin-top: 14px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .image-container {
+                height: 210px;
+            }
+
+            .recipe-content {
+                padding: 20px 18px;
+            }
+
+            .recipe-title {
+                font-size: 22px;
+            }
+
+            .recipe-meta {
+                gap: 8px;
+            }
         }
     </style>
 </head>
@@ -174,7 +228,7 @@
             <section class="recipe-section">
                 <h2 class="section-title">Ingredients</h2>
                 
-                <h3 style="font-size: 15px; margin: 10px 0 8px 0; color: #555;">Main Ingredients:</h3>
+                <h3 class="ingredient-subtitle">Main Ingredients:</h3>
                 <ul class="ingredients-list">
                     <li><input type="checkbox" id="ing1"><label for="ing1">400g cold white rice (day-old/pera)</label></li>
                     <li><input type="checkbox" id="ing2"><label for="ing2">2 eggs</label></li>
@@ -185,7 +239,7 @@
                     <li><input type="checkbox" id="ing7"><label for="ing7">Vegetables: Diced carrots, sweet corn kernels, and green beans as needed</label></li>
                 </ul>
 
-                <h3 style="font-size: 15px; margin: 14px 0 8px 0; color: #555;">Seasonings:</h3>
+                <h3 class="ingredient-subtitle">Seasonings:</h3>
                 <ul class="ingredients-list">
                     <li><input type="checkbox" id="ing8"><label for="ing8">1 tbsp oyster sauce</label></li>
                     <li><input type="checkbox" id="ing9"><label for="ing9">1–2 tbsp light soy sauce</label></li>
