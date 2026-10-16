@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seafood Fried Rice Recipe</title>
+    <style>
+        :root {
+            --gold: #ffc107;
+            --gold-light: #fff3c4;
+            --gold-dark: #b8860b;
+            --brown: #3a2e00;
+        }
+
+        /* Basic Reset & Global Box-Sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fffdf5;
+            color: var(--brown);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        /* Card Wrapper with Shadow & Hover Effect */
+        .recipe-card {
+            max-width: 680px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(184, 134, 11, 0.25);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(184, 134, 11, 0.3);
+        }
+
+        /* Header Image Container */
+        .image-container {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Recipe Content Layout */
+        .recipe-content {
+            padding: 24px 28px;
+        }
+
+        .recipe-title {
+            color: var(--brown);
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        /* Metadata Badges Container */
+        .recipe-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .meta-item {
+            background-color: var(--gold-light);
+            color: var(--brown);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid var(--gold);
+        }
+
+        /* Section Layout */
+        .recipe-section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: var(--gold-dark);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        /* Interactive Checkbox Styling */
+        .ingredients-list {
+            list-style: none;
+        }
+
+        .ingredients-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .ingredients-list input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--gold-dark);
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            margin-right: 12px;
+            position: relative;
+            flex: 0 0 18px;
+            transition: all 0.2s ease;
+        }
+
+        .ingredients-list input[type="checkbox"]:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        .ingredients-list label {
+            flex: 1;
+            min-width: 0;
+            cursor: pointer;
+        }
+
+        .ingredients-list input[type="checkbox"]:checked {
+            background-color: var(--brown);
+            border-color: var(--brown);
+        }
+
+        .ingredients-list input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 12px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .ingredients-list input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: var(--gold-dark);
+        }
+
+        /* Steps List Styling */
+        .steps-list {
+            padding-left: 20px;
+        }
+
+        .steps-list li {
+            margin-bottom: 12px;
+            color: var(--brown);
+        }
+
+        .step-label {
+            color: var(--gold-dark);
+        }
+
+        .ingredient-subtitle {
+            margin: 10px 0 8px;
+            color: var(--brown);
+            font-size: 15px;
+        }
+
+        .ingredient-subtitle + .ingredients-list + .ingredient-subtitle {
+            margin-top: 14px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .image-container {
+                height: 210px;
+            }
+
+            .recipe-content {
+                padding: 20px 18px;
+            }
+
+            .recipe-title {
+                font-size: 22px;
+            }
+
+            .recipe-meta {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <article class="recipe-card">
+        <!-- Recipe Header Image -->
+        <div class="image-container">
+            <img class="recipe-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb33Qq_-gtOvyviHGIZe4N13cjs0DlOf8BPhAHORBk1Tc8R2ss13F_grSK&s=10" alt="Seafood Fried Rice">
+        </div>
+
+        <div class="recipe-content">
+            <header>
+                <h1 class="recipe-title">Seafood Fried Rice (Nasi Goreng Seafood) (๑ᵔ⤙ᵔ๑)</h1>
+
+                <!-- Metadata Badges -->
+                <div class="recipe-meta">
+                    <span class="meta-item">15 Mins</span>
+                    <span class="meta-item">🔥 Medium</span>
+                    <span class="meta-item">🍽️ 1-2 Servings</span>
+                </div>
+            </header>
+
+            <!-- Ingredients Section -->
+            <section class="recipe-section">
+                <h2 class="section-title">Ingredients</h2>
+                
+                <h3 class="ingredient-subtitle">Main Ingredients:</h3>
+                <ul class="ingredients-list">
+                    <li><input type="checkbox" id="ing1"><label for="ing1">300g cold white rice (leftover/day-old)</label></li>
+                    <li><input type="checkbox" id="ing2"><label for="ing2">100g peeled shrimp (tail left on)</label></li>
+                    <li><input type="checkbox" id="ing3"><label for="ing3">100g squid, cleaned and cut into rings</label></li>
+                    <li><input type="checkbox" id="ing4"><label for="ing4">2 eggs, beaten</label></li>
+                    <li><input type="checkbox" id="ing5"><label for="ing5">3 cloves garlic, finely minced</label></li>
+                    <li><input type="checkbox" id="ing6"><label for="ing6">1/2 onion, chopped</label></li>
+                    <li><input type="checkbox" id="ing7"><label for="ing7">1 stalk green onion, diagonally sliced</label></li>
+                </ul>
+
+                <h3 class="ingredient-subtitle">Sauce Mix & Seasonings:</h3>
+                <ul class="ingredients-list">
+                    <li><input type="checkbox" id="ing8"><label for="ing8">1.5 tbsp oyster sauce</label></li>
+                    <li><input type="checkbox" id="ing9"><label for="ing9">1 tbsp light soy sauce</label></li>
+                    <li><input type="checkbox" id="ing10"><label for="ing10">1 tsp fish sauce</label></li>
+                    <li><input type="checkbox" id="ing11"><label for="ing11">1 tsp sesame oil</label></li>
+                    <li><input type="checkbox" id="ing12"><label for="ing12">1/2 tsp ground white pepper</label></li>
+                    <li><input type="checkbox" id="ing13"><label for="ing13">1/2 tsp salt or mushroom seasoning</label></li>
+                    <li><input type="checkbox" id="ing14"><label for="ing14">Cooking oil as needed</label></li>
+                </ul>
+            </section>
+
+            <!-- Cooking Steps Section -->
+            <section class="recipe-section">
+                <h2 class="section-title">Instructions</h2>
+                <ol class="steps-list">
+                    <li><strong class="step-label">Sauté seafood:</strong> Heat a little oil in a wok, stir fry the shrimp and squid for 1 to 2 minutes until color changes. Remove and set aside.</li>
+                    <li><strong class="step-label">Sauté aromatics:</strong> In the same wok, stir fry minced garlic and chopped onion until fragrant and soft.</li>
+                    <li><strong class="step-label">Scramble the eggs:</strong> Push aromatics to the side of the wok, pour beaten eggs into the empty space, and scramble until set.</li>
+                    <li><strong class="step-label">Add rice and sauces:</strong> Add cold white rice, then pour in oyster sauce, light soy sauce, fish sauce, white pepper, and salt. Stir thoroughly over high heat.</li>
+                    <li><strong class="step-label">Combine seafood:</strong> Readd the stir fried shrimp and squid back into the wok, add green onions and sesame oil. Stir quickly for 1 minute.</li>
+                    <li><strong class="step-label">Serve:</strong> Transfer to a plate and serve hot with lemon or lime wedges on the side.</li>
+                </ol>
+            </section>
+        </div>
+    </article>
+
+</body>
+</html>
