@@ -28,12 +28,12 @@
     </head>
     <body class="form">
         <b><h1 class="p h1">Feedback page</h1></b>
-        <form action="/submit" method="post">
+        <form action="submit.php" method="post">
             <label for="name">Name:</label>
-            <input type="text" class="lengkung" id="name" name="name"><br><br>
+            <input type="text" class="lengkung" id="name" name="name" required><br><br>
 
             <label for="email">Email:</label>
-            <input type="email" class="lengkung" id="email" name="email"><br><br>
+            <input type="email" class="lengkung" id="email" name="email" required><br><br>
             <label for="feedback">Feedback:</label><br>
             <textarea name="feedback" rows="4" cols="50" placeholder="Enter your feedback here..." class="lengkung"></textarea><br>
              <input type="submit" class="lengkung" value="Submit">
